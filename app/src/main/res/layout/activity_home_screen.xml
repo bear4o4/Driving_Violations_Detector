@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".HomeScreen">
+
+    <Button
+        android:id="@+id/buttontrips"
+        android:layout_width="274dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="TRIPS"
+        android:textColor="#F44336"
+        android:textColorLink="#D8E1E6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonstart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="START"
+        android:textColor="#F44336"
+        app:layout_constraintEnd_toStartOf="@+id/buttonstop"
+        app:layout_constraintHorizontal_bias="0.387"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttontrips" />
+
+    <Button
+        android:id="@+id/buttonstop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="56dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="STOP"
+        android:textColor="#F44336"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttontrips" />
+
+    <TextView
+        android:id="@+id/textViewtripcountnumber"
+        android:layout_width="247dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="24dp"
+        android:textAlignment="center"
+        android:textColor="#282D37"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonstart" />
+
+    <ScrollView
+        android:id="@+id/scroollview"
+        android:layout_width="217dp"
+        android:layout_height="249dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewtripcountnumber">
+
+        <LinearLayout
+            android:id="@+id/LLhomescreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView2"
+        android:layout_width="309dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="60dp"
+        app:adSize="BANNER"
+
+        app:adUnitId="ca-app-pub-7361778772201584~9719775675"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.548"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scroollview" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
